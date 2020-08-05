@@ -30,7 +30,7 @@
     position: absolute;
 }
 .circle.open {
-    margin-right: 5px;
+    margin-right: 10px;
     background: white;
     transform: translateX(5px);
 }
