@@ -1,66 +1,70 @@
 .App {
-  font-family: sans-serif;
-  text-align: center;
+    font-family: sans-serif;
+    text-align: center;
 }
 
 .mySwitch {
-  border-radius: 50px;
-  background: red;
-  width: 100px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative
+    border-radius: 50px;
+    background: red;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    transition: all 0.4s ease;
 }
 
 .mySwitch.open {
-  justify-content: flex-end;
-  background: gray
+    justify-content: flex-end;
+    background: gray;
 }
 .circle {
-  height: 45px;
-  width: 40px;
-  background:pink;
-  border-radius: 50%;
-  margin-left: 5px;
-  cursor: pointer;
+    height: 45px;
+    width: 40px;
+    background: pink;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    position: absolute;
 }
 .circle.open {
-  margin-right: 5px;
-  background: white;
+    margin-right: 5px;
+    background: white;
+    transform: translateX(5px);
 }
 .circle:hover {
-  animation-duration: 1s;
-  animation-name: glow;
-  animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: glow;
+    animation-iteration-count: infinite;
 }
 .circle.open:hover {
-  animation-iteration-count: 0;
+    animation-iteration-count: 0;
 }
 
 .icon {
-  height: 30px;
-  width: 30px;
-  margin-right: 5px;
-  background-image: url('https://mdn.mozillademos.org/files/7693/catfront.png');
-  border-radius: 50%;
-  /* visibility: hidden; */
-  position: absolute;
-  right: 0;
-} 
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    background-image: url('https://mdn.mozillademos.org/files/7693/catfront.png');
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    transition: 0.4s ease;
+}
 .icon.open {
-  margin-left: 5px;
-  margin-right: 9px;
-  left: 0;
+    margin-left: 5px;
+    margin-right: 9px;
+    left: 0;
 }
 
 @keyframes glow {
-  from {
-    border: solid 1px yellow;
-  }
+    from {
+        border: solid 1px yellow;
+    }
 
-  to {
-    border: solid 2px orange;
-  }
+    to {
+        border: solid 2px orange;
+    }
 }
